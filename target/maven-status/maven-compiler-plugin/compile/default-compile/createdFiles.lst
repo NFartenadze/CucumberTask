@@ -1,0 +1,12 @@
+solvd/carina/demo/gui/components/FooterMenu.class
+solvd/carina/demo/gui/components/WeValuePrivacyAd.class
+solvd/carina/demo/gui/components/NewsItem.class
+solvd/carina/demo/gui/components/ModelItem.class
+solvd/carina/demo/gui/components/compare/CondidateBlock.class
+solvd/carina/demo/gui/components/compare/ModelSpecs.class
+solvd/carina/demo/gui/components/compare/ModelSpecs$SpecType.class
+solvd/carina/demo/gui/pages/NewsPage.class
+solvd/carina/demo/gui/pages/ModelInfoPage.class
+solvd/carina/demo/gui/pages/CompareModelsPage.class
+solvd/carina/demo/gui/pages/BrandModelsPage.class
+solvd/carina/demo/gui/pages/HomePage.class

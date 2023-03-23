@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="solvd.carina.BDD.db.mappers.OrdersMapper">
+
+    <resultMap id="OrdersResultMap" type="Orders">
+        <id column="id" property="id" />
+        <result column="user_id" property="userID" />
+        <result column="product_name" property="productName" />
+        <result column="product_price" property="productPrice" />
+
+    </resultMap>
+    <!-- Select all orders -->
+    <select id="getAllOrders" resultMap="OrdersResultMap">
+        SELECT * FROM orders
+    </select>
+
+    <!-- Select order by id -->
+    <select id="getOrderById" resultMap="OrdersResultMap">
+        SELECT * FROM orders WHERE id = #{id}
+    </select>
+
+    <!-- Insert a new order -->
+    <insert id="insertOrder" parameterType="Orders">
+        INSERT INTO orders(user_id, product_name, product_price)
+        VALUES (#{userID}, #{productName}, #{productPrice})
+    </insert>
+
+    <!-- Update an order by id -->
+    <update id="updateOrderById" parameterType="Orders">
+        UPDATE orders
+        SET user_id = #{user_id},
+        product_name = #{product_name},
+        product_price = #{product_price}
+        WHERE id = #{id}
+    </update>
+
+    <!-- Delete an order by id -->
+    <delete id="deleteOrderById">
+        DELETE FROM orders WHERE id = #{id}
+    </delete>
+
+</mapper>

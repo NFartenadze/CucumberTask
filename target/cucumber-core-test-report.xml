@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.472">
+    <testcase classname="GSM Arena News testing" name="GSM Arena open page - passing" time="17.19">
+        <system-out><![CDATA[Given I am on main page.....................................................passed
+When I open 'News' page.....................................................passed
+Then page 'News' should be open.............................................passed
+And page 'News' should contains all items...................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
