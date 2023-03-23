@@ -28,8 +28,9 @@ public class LoginPage extends AbstractPage {
     public boolean isLoginBtnPresent(){
         return loginBtn.isElementPresent();
     }
-    public void clickLogin(){
+    public ProductPage clickLogin(){
         loginBtn.click();
+        return new ProductPage(getDriver());
     }
     public void typeLogin(String login){
         loginField.type(login);

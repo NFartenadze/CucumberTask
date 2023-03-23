@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import solvd.carina.BDD.db.mappers.OrdersMapper;
 import solvd.carina.BDD.db.models.Orders;
+import solvd.carina.BDD.db.models.User;
 import solvd.carina.BDD.utils.MyBatis;
 
 import java.util.List;
@@ -27,7 +28,21 @@ public class OrdersDAO implements OrdersMapper {
     }
 
     @Override
-    public Orders getOrderById(int id) {
+    public List<Orders> getAllOrdersByUserId(long userId) {
+        SqlSession session = MyBatis.getSession();
+        try {
+            OrdersMapper mapper = session.getMapper(OrdersMapper.class);
+            return mapper.getAllOrdersByUserId(userId);
+        } catch (Exception e) {
+            logger.error(e);
+        } finally {
+            MyBatis.close(session);
+        }
+        return null;
+    }
+
+    @Override
+    public Orders getOrderById(long id) {
         SqlSession session = MyBatis.getSession();
         try {
             OrdersMapper mapper = session.getMapper(OrdersMapper.class);

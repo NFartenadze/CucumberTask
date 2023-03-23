@@ -23,4 +23,43 @@ public class CartPage extends AbstractPage {
     public CartPage(WebDriver driver) {
         super(driver);
     }
+    public boolean isCheckoutBtnPresent(){
+        return checkoutBtn.isElementPresent();
+    }
+    public void clickCheckoutBtn(){
+        checkoutBtn.click();
+    }
+    public boolean isContinueBtnPresent(){
+        return continueBtn.isElementPresent();
+    }
+    public void clickContinueBtn(){
+        continueBtn.click();
+    }
+    public boolean isFinishBtnPresent(){
+        return finishBtn.isElementPresent();
+    }
+    public void clickFinishBtn(){
+        finishBtn.click();
+    }
+    public boolean isFirstNameFieldPresent(){
+        return firstNameField.isElementPresent();
+    }
+    public void typeFirstName(String firstName){
+        firstNameField.type(firstName);
+    }
+    public boolean isLastNameFieldPresent(){
+        return lastNameField.isElementPresent();
+    }
+    public void typeLastName(String lastName){
+        lastNameField.type(lastName);
+    }
+    public boolean isZipCodeFieldPresent(){
+        return zipCodeField.isElementPresent();
+    }
+    public void typeZipCode(String zipCode){
+        zipCodeField.type(zipCode);
+    }
+    public double getTotalPrice(){
+        return Double.parseDouble(totalPriceLabel.getText());
+    }
 }

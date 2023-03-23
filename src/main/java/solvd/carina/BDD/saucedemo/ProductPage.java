@@ -4,9 +4,11 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.core.annotation.Order;
+import solvd.carina.BDD.db.models.Orders;
 
 public class ProductPage extends AbstractPage {
-    @FindBy(xpath = "//div[@class='inventory_item_name'][contains(text(),'%s')]")
+    @FindBy(xpath = "//*[contains(text(),'%s')]/../../..//button")
     private ExtendedWebElement product;
 
     @FindBy(xpath = "//a[@class='shopping_cart_link']")
@@ -21,6 +23,10 @@ public class ProductPage extends AbstractPage {
     public CartPage clickCartLink(){
         cartLink.click();
         return new CartPage(getDriver());
+    }
+    public void addProductToCart(Orders order){
+        product.format(order.getProductName()).scrollTo();
+        product.format(order.getProductName()).click();
     }
 
 }
