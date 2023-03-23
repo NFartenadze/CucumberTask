@@ -1,7 +1,0 @@
-
-@demo
-Scenario: GSM Arena open page - passing     [90m# src/test/resources/features/GSMArenaNews.feature:5[0m
-  [32mGiven [0m[32mI am on main page[0m                   [90m# solvd.carina.demo.cucumber.steps.GSMArenaNewsSteps.iAmOnMainPage()[0m
-  [32mWhen [0m[32mI open 'News' page[0m                   [90m# solvd.carina.demo.cucumber.steps.GSMArenaNewsSteps.iOpenNewsPage()[0m
-  [32mThen [0m[32mpage 'News' should be open[0m           [90m# solvd.carina.demo.cucumber.steps.GSMArenaNewsSteps.pageSettingsShouldBeOpen()[0m
-  [32mAnd [0m[32mpage 'News' should contains all items[0m [90m# solvd.carina.demo.cucumber.steps.GSMArenaNewsSteps.pageSettingsShouldContainsAllItems()[0m
